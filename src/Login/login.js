@@ -29,7 +29,7 @@ class Login extends Component {
     <Grid columns={2} relaxed='very' stackable>
       <Grid.Column>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Input icon='user' iconPosition='left' label='Username' placeholder='Username' value={this.state.username} onChange={this.handleChange}/>
+          <Form.Input icon='user' iconPosition='left' label='Username' type='text' placeholder='Username' value={this.state.username} onChange={this.handleChange}/>
           <Form.Input icon='lock' iconPosition='left' label='Password' type='password' value={this.state.password} onChange={this.handleChange}/>
 
           <Button type='submit' content='Login' primary />
@@ -37,7 +37,7 @@ class Login extends Component {
       </Grid.Column>
 
       <Grid.Column verticalAlign='middle'>
-        <Button content='Sign up' icon='signup' size='big' />
+        <Button content='Sign up' icon='signup' size='big'/>
       </Grid.Column>
     </Grid>
 

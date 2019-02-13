@@ -31,3 +31,24 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  background-color: silver;
+}
+
+h1{
+  color: black;
+}
+
+ul{
+  list-style: none;
+  color: white;
+  align-content: center;
+  padding-right: 5%;
+}
+
+li{
+    margin-bottom: 100px;
+    background-color: grey;
+    border-radius: 5%;
+}

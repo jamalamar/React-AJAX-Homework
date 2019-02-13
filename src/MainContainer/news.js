@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Container, Divider } from 'semantic-ui-react'
 
 class News extends Component {
 
@@ -6,24 +7,29 @@ class News extends Component {
 
 		const newsComposed = this.props.news.map((item, index)=>{
 			return (
-				<li key={index}>
-					 <h3>{item.source.name}</h3>
-					 <h5>{item.author}</h5>
-					 <h5>{item.title}</h5>
-					 <h5>{item.description}</h5>
-					 <a href='{item.url}'></a>
-					 <a>{item.urlToImage}</a>
-					 <h5>{item.publishedAt}</h5>
-					 <h5>{item.content}</h5>
+				<li key={index}>  
+					<div>
+					<Container textAlign='center'><h2>{item.title}</h2></Container>
+					<Container textAlign='left'>{item.source.name}</Container>
+					<Container textAlign='right'>{item.publishedAt}</Container>
+					<Container textAlign='justified'>
+						<b>{item.author}</b>
+					<Divider />
+						<h3>{item.title}</h3>
+						<p>{item.description}</p>
+						<p>{item.content}</p>
+					</Container>
+					</div>
 				</li>
-				)
+
+			)
 		})
 
-		return(
-		<ul>
-			{newsComposed}
-		</ul>
-		)
+			return(
+			<ul>
+				{newsComposed}
+			</ul>
+			)
 	}
 }
 
