@@ -33,22 +33,47 @@
 }
 
 body{
-  background-color: silver;
+  background-color: #011627;
 }
 
+.Login{
+  display: flex; 
+  border-radius: 10%
+
+}
+
+.newTittle {
+  color: #fdfffc;
+}
+
+a{
+  color: #fdfffc;
+}
+
+a:hover{
+  opacity: 0.5;
+  color: #fdfffc;
+  }
+
 h1{
-  color: black;
+  color: #fdfffc;
+}
+
+h3{
+  color: #fdfffc;
 }
 
 ul{
   list-style: none;
-  color: white;
+  color: #fdfffc;
   align-content: center;
-  padding-right: 5%;
+  padding-right: 25%;
+  padding-left: 25%
 }
 
 li{
     margin-bottom: 100px;
-    background-color: grey;
-    border-radius: 5%;
+    background-color: #d73d29;
+    border-radius: 2%;
+    padding: 20px;
 }

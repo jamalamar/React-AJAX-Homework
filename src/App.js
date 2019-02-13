@@ -20,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <h1>Top News!</h1>
         {this.state.logged ? <MainContainer username={this.state.username}/> : <Login login={this.login}/>}
       </div>
     );

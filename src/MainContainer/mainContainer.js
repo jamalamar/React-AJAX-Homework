@@ -32,7 +32,7 @@ class MainContainer extends Component {
 	render() {
 		return (
 			<div>
-			<h1>Welcome {this.props.username} to Top News!</h1>
+			<h3>Welcome {this.props.username}</h3>
 			<News news={this.state.news}/>
 			</div>
 

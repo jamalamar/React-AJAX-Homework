@@ -8,8 +8,8 @@ class News extends Component {
 		const newsComposed = this.props.news.map((item, index)=>{
 			return (
 				<li key={index}>  
-					<div>
-					<Container textAlign='center'><h2>{item.title}</h2></Container>
+					<a href={item.url}>
+					<Container className='newsTittle'textAlign='center'><h2>{item.title}</h2></Container>
 					<Container textAlign='left'>{item.source.name}</Container>
 					<Container textAlign='right'>{item.publishedAt}</Container>
 					<Container textAlign='justified'>
@@ -19,7 +19,7 @@ class News extends Component {
 						<p>{item.description}</p>
 						<p>{item.content}</p>
 					</Container>
-					</div>
+					</a>
 				</li>
 
 			)

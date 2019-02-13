@@ -25,12 +25,12 @@ class Login extends Component {
 
   render() {
     return(
-  <Segment placeholder>
+  <Segment placeholder className='Login'>
     <Grid columns={2} relaxed='very' stackable>
       <Grid.Column>
         <Form onSubmit={this.handleSubmit}>
-          <Form.Input icon='user' iconPosition='left' label='Username' type='text' placeholder='Username' value={this.state.username} onChange={this.handleChange}/>
-          <Form.Input icon='lock' iconPosition='left' label='Password' type='password' value={this.state.password} onChange={this.handleChange}/>
+          <Form.Input icon='user' iconPosition='left' label='Username' type='text' placeholder='Username' onChange={this.handleChange}/>
+          <Form.Input icon='lock' iconPosition='left' label='Password' type='password' onChange={this.handleChange}/>
 
           <Button type='submit' content='Login' primary />
         </Form>
