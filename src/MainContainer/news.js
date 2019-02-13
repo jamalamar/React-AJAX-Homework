@@ -10,6 +10,7 @@ class News extends Component {
 				<li key={index}>  
 					<a href={item.url}>
 					<Container className='newsTittle'textAlign='center'><h2>{item.title}</h2></Container>
+					<img src={item.urlToImage} />
 					<Container textAlign='left'>{item.source.name}</Container>
 					<Container textAlign='right'>{item.publishedAt}</Container>
 					<Container textAlign='justified'>

@@ -35,6 +35,12 @@
 body{
   background-color: #011627;
 }
+img{
+  width: 250px;
+  border: solid 5px #fdfffc;
+  border-radius: 10%;
+
+}
 
 .Login{
   display: flex; 
@@ -57,6 +63,7 @@ a:hover{
 
 h1{
   color: #fdfffc;
+  font-size: 60px;
 }
 
 h3{
