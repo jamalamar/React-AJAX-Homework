@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import News from './news.js'
 
 
 class MainContainer extends Component {
@@ -8,11 +9,12 @@ class MainContainer extends Component {
 	}
 
 	getNews = async () => {
-		try{
+
+		try {
 			const news = await fetch('https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=7e53927e0355469b847cbdd558c52cf3');
 			const newsJson = await news.json();
 			this.setState({
-				news: newsJson
+				news: newsJson.articles
 			});
 			return newsJson;
 		}	
@@ -30,7 +32,8 @@ class MainContainer extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Hola</h1>
+			<h1>Hola</h1>
+			<News news={this.state.news}/>
 			</div>
 			)
 	}

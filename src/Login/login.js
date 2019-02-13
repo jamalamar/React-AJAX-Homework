@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button, Divider, Form, Grid, Segment } from 'semantic-ui-react'
+
 
 class Login extends Component {
 
@@ -6,8 +8,6 @@ class Login extends Component {
     username: '',
     password: ''
   }
-
-
 
     handleSubmit = (event) => {
     // stop page from refreshing
@@ -22,15 +22,30 @@ class Login extends Component {
       })
     }
 
-  render() {
-    return (
-    <form onSubmit={this.handleSubmit}>
-        <input type='text' name='username' placeholder='username' value={this.state.username} onChange={this.handleChange}/>
-        <input type='password' name='password' placeholder='password' value={this.state.password} onChange={this.handleChange}/>
-        <input type='submit' value='Submit'/>
-    </form>
-    );
-  }
-};
 
+  render() {
+    return(
+  <Segment placeholder>
+    <Grid columns={2} relaxed='very' stackable>
+      <Grid.Column>
+        <Form onSubmit={this.handleSubmit}>
+          <Form.Input icon='user' iconPosition='left' label='Username' placeholder='Username' value={this.state.username} onChange={this.handleChange}/>
+          <Form.Input icon='lock' iconPosition='left' label='Password' type='password' value={this.state.password} onChange={this.handleChange}/>
+
+          <Button type='submit' content='Login' primary />
+        </Form>
+      </Grid.Column>
+
+      <Grid.Column verticalAlign='middle'>
+        <Button content='Sign up' icon='signup' size='big' />
+      </Grid.Column>
+    </Grid>
+
+    <Divider vertical>Or</Divider>
+  </Segment>
+  )
+  }
+}
 export default Login;
+
+
